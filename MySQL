@@ -1,0 +1,10 @@
+-- Select the customer ID column from the ORDERS table
+SELECT CUSTOMER_ID
+-- Group the results by the CUSTOMER_ID column
+FROM ORDERS
+GROUP BY CUSTOMER_ID
+-- Order the groups by the count of orders in descending order,
+-- and then by the CUSTOMER_ID in ascending order
+ORDER BY COUNT(*) DESC, CUSTOMER_ID ASC
+-- Limit the output to only the top customer with the most orders
+LIMIT 1;
